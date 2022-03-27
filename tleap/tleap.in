@@ -1,8 +1,0 @@
-source leaprc.constph
-# Load the PDBs
-2lko = loadPDB 2lko-no-IP4.pdb
-#Save topology files
-saveAmberParm 2lko 2lko.parm7 2lko.rst7
-
-#Quit
-quit
