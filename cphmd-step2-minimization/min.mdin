@@ -1,0 +1,14 @@
+Minimization to prepare for constant pH MD
+&cntrl
+   imin = 1,                   ! Turn on minimization
+   igb = 2,                    ! Use the GB model CpHMD was parametrized for
+   saltcon = 0.1,              ! Use the salt conc. CpHMD was parametrized for
+   maxcyc = 100000,            ! Total number of minimization cycles
+   icnstph = 1,                ! Turn on constant pH
+   ntcnstph = 1000000,          ! Never attempt to change prot. states
+   cut = 1000.0,               ! No cutoff
+   drms = 0.0001,		! Stop minimization once RMS of gradient's Cartesian elements is < drms
+   ntr = 1,                    ! Turn on positional restraints
+   restraint_wt = 10,          ! 10 kcal/mol/A**2 restraint force constant
+   restraintmask = '@CA,C,O,N' ! Restraints on the backbone atoms only
+/

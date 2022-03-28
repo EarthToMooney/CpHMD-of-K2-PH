@@ -1,0 +1,29 @@
+Mandatory Space
+&cntrl
+  imin = 0,
+  ntx = 5,
+  irest = 1,
+  ntc = 2,
+  ntf = 2,
+  tol = 0.0000001,
+  nstlim = 2000000, ! 2 ns equilibration
+  ntt = 3,
+  gamma_ln = 1.0,
+  temp0 = 310.0,
+  ntpr = 1000,
+  ntwr = 1000,
+  ntwx = 1000,
+  ig = -1,
+  ntb = 2,
+  ntp = 2,
+  cut = 10.0,
+  ioutfm = 1,
+  ntxo =2,
+  ntr = 1, ! Turn position restraints on
+  restraint_wt = 5, ! 5 kcal/mol/Angstrom squared restraint force constant
+  restraintmask = '@CA' !
+/
+/
+&ewald
+  skinnb = 5, ! Increase skinnb to avoid skinnb error
+/

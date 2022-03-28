@@ -1,0 +1,36 @@
+Heating to 310 K
+&cntrl
+  imin = 0,
+  ntx = 1,  ! Positions only read formatted
+  irest = 0,! Not a restart
+  ntc = 2,
+  ntf = 2,
+  tol = 0.0000001,
+  nstlim = 50000, ! Number of MD steps
+  ntt = 3,
+  gamma_ln = 1.0,
+  ig = -1,
+  ntpr = 100,
+  ntwr = 10000,
+  ntwx = 100,
+  dt = 0.002,
+  nmropt = 1,
+  ntb = 2,  ! Constant pressure periodic boundary conditions
+  ntp = 2,  ! Anisotropic pressure coupling
+  taup = 2.0, ! Pressure relaxation time (ps)
+  cut = 10.0,
+  ioutfm = 1,
+  ntxo = 2,
+  ntr = 1, ! Turn position restraints on
+  restraint_wt = 5, ! 5 kcal/mol/Angstrom squared restraint force constant
+  restraintmask = '@CA' ! Positional Restraints on Ca backbone atoms
+/
+$wt
+  type = 'TEMP0',
+  istep1 = 0,
+  istep2 = 50000,
+  value1 = 0,
+  value2 = 310.0
+/
+$wt type = 'END'
+/

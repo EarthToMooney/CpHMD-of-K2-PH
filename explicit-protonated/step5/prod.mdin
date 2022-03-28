@@ -1,0 +1,22 @@
+Mandatory space
+&cntrl
+  imin = 0,  ! Minimization toggled off
+  ntx = 5, ! Positions and velocities read formatted
+  irest = 1, ! Restart calculation
+  ntwx = 500, ! Write netcdf traj out every ps (500 steps * 2 fs / step = 1000 fs = 1 ps)
+  ntc = 2, ! Shake on for bonds with hydrogen
+  ntf = 2, ! No force evaluation for bonds with hydrogen
+  tol = 0.0000001, ! SHAKE tolerance
+  nstlim = 10000000 ! Number of MD steps (total: 0.002*10,000,000 = 20 ns)
+  ntt = 3, ! Langevin thermostat
+  gamma_ln = 1.0, ! Collision frequency for thermostat
+  temp0 = 310.0, ! Simulation temperature (K)
+  ntpr = 500, ! Print to mdout every ntpr steps
+  ntwr = 500, ! Write to trajectory file every ntwc steps
+  dt = 0.002, ! Timestep (ps)
+  ig = -1, ! Random seed for Langevin thermostat
+  ntb = 2, ! Constant pressure periodic boundary conditions
+  ntp = 2, ! Anisotropic pressure coupling
+  cut = 10.0, ! Nonbonded cutoff (Angstroms)
+  ioutfm = 1, ! Write binary NetCDF trajectory
+/

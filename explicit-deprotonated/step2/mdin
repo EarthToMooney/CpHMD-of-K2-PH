@@ -1,0 +1,18 @@
+Space Here
+&cntrl 
+  maxcyc = 15000, ! # of steps for minimization (10k conj gradient)
+  ncyc = 5000, ! # of steps for steepest decent
+  imin = 1, ! minimize energy of structure
+  ntb = 1, ! Constant Volume (Periodic Boundary is applied under constant temp)
+  ntp = 0, ! No pressure scaling
+  ntf = 1, ! Complete force evaluation
+  ntc = 1, ! No Shake
+  igb=0, ! Born Solvent turned off - implicit solvent
+  ntpr = 100, ! Print to mdout every ntpr steps (human readable energy)
+  ntwr = 100, ! Write a restart file every ntwr steps
+  ntwx = 100, ! Write to nc file every ntwx steps
+  cut = 10.0, ! Nonbonded cutoff in Angstroms
+  ntr = 1, ! Turn position restraints on
+  restraint_wt = 5, ! 5 kcal/mol/Angstrom squared restraint force constant
+  restraintmask = '@P31, CA' ! Positional Restraints on P31 of Bilayer and Ca of backbone on PH Domain
+/

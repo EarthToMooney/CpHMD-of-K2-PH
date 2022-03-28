@@ -1,0 +1,9 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+source leaprc.gaff2
+
+4IP = loadmol2 ip4_h.mol2
+SYS = loadpdb adjusted_2.pdb
+solvatebox SYS TIP3PBOX 20
+saveAmberParm SYS 14sb_control.parm7 14sb_control.rst7
+quit

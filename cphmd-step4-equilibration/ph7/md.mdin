@@ -1,0 +1,30 @@
+Implicit solvent constant pH molecular dynamics
+ &cntrl 		! BELOW: Comments explaining why each variable was chosen.
+   imin=0, 		! Turn off minimization
+   irest=1, 		! Use past velocities from coordinate files
+   ntx=5, 		! Coordinates and velocities from the input file will be used
+   ntpr=1000, 		! Print readable energy information every 1000 steps in the .out file
+   ntwx=1000, 		! Update the coordinate trajectory file every 1000 steps
+   nstlim=500000, 	
+   dt=0.002, 		! Simulated time between steps; the tutorial value is used
+   ntt=3, 		! Langevin thermostat (part of heating/temperature mechanism)
+   tempi=310, 		! Temperature of 310 K = roughly 37 degrees C = avg. human body temp.
+   temp0=310, 		! Temperature of 310 K = roughly 37 degrees C = avg. human body temp.
+   tautp=2.0, 		! Time constant for heat bath coupling; used by Swails and McGee in their tutorial
+   ig=-1, 		! Avoids "synchronization" artifacts while using Langevin thermostat
+   ntp=0, 		! Default value; no pressure scaling.
+   ntc=2, 		! Bond length constraints on bonds involving hydrogen (used by Swails and McGee)
+   ntf=2, 		! Recommended by Amber manual when ntc=2
+   cut=30, 		! Cutoff used by Mongan et al. when creating this CpHMD method
+   ntb=0, 		! Default; no longer needed, and thus set to 0
+   igb=2, 		! Use the GB model CpHMD was parametrized for
+   saltcon=0.1, 	! Use the salt conc. CpHMD was parametrized for
+   nrespa=1, 		! According to Amber manual (p.443), this should equal 1 in implicit solvent
+   tol=0.000001, 	! Recommended by Amber manual to be <.00005. Used value from tutorial (see above).
+   icnstph=1, 		! Turn on constant pH
+   solvph=7, 		! Solvent pH value
+   ntcnstph=1, 		! Attempt to change protonation states every step
+   gamma_ln=5.0, 	! Used in the aforementioned tutorial; values of 2-5 recommended by Amber manual.
+   ntwr=10000, 		! Saves copies of important files every 10000 steps as backups in case crashes occur
+   ioutfm=1, 		! Output files are in binary formats, making them smaller and generally more useful
+  /

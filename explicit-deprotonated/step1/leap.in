@@ -1,0 +1,12 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+source leaprc.gaff2
+
+4IP = loadmol2 ip4-deprot.mol2
+check 4IP
+charge 4IP
+SYS = loadpdb full-deprot.pdb
+solvatebox SYS TIP3PBOX 20
+addIonsRand SYS Na+ 0
+saveAmberParm SYS 2lko-ion.parm7 2lko-ion.rst7
+quit
